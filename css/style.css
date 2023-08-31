@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', 'Segoe-UI', Verdana, Geneva, Tahoma, sans-serif;
+    /* overflow-x: hidden; */
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    gap: 25px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+nav .logo h2{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.toggler{
+    display: none;
+}
+
+
+nav ul{
+    list-style-type: none;
+}
+
+nav .menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0px 10px 0px 30px;
+}
+
+.left-menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: hsl(0, 0%, 41%);
+    cursor:pointer;
+}
+
+.left-menu, .right-menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: hsl(0, 0%, 41%);
+}
+
+.left-menu button:active{
+    color: hsl(0, 0%, 8%);
+}
+
+a{
+    text-decoration: none;
+    color:hsl(0, 0%, 41%)
+}
+
+.menu a:active{
+    color:hsl(0, 0%, 8%);
+}
+
+.register{
+    padding: 10px 17px;
+    border: 1px solid hsl(0, 0%, 41%);
+    border-radius: 13px;
+}
+
+.register:active{
+    border: 1px solid hsl(0, 0%, 8%);
+}
+
+/* .left-menu{
+    position: relative;
+} */
+
+@media screen and (min-width: 820px) {
+    #feature{
+        position: relative;
+    }
+    .features{
+        display: none;
+        position: absolute;
+        background-color: white;
+        padding: 15px 25px 10px 25px;
+        border-radius: 8px;
+        top: 65px;
+        left: 115px;
+        box-shadow: 2px 2px 18px 2px lightgrey;
+        z-index: 99999;
+    }
+    
+    .features li{
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    
+    .features .iconn{
+        vertical-align: bottom;
+        width: 15px;
+        margin-right: 10px;
+    }
+    
+    .company{
+        display: none;
+        position: absolute;
+        background-color: white;
+        padding: 15px 15px 8px 15px;
+        border-radius: 8px;
+        top: 65px;
+        left: 309px;
+        box-shadow: 2px 2px 18px 2px lightgrey;
+        z-index: 100;
+    }
+    
+    .company li{
+        margin-bottom: 15px;
+    }
+}
+
+
+
+/* End of Navbar */
+
+
+/* Main */
+
+main{
+    display: flex;
+    padding: 50px 118px;
+}
+
+main .left{
+    padding: 90px 71px 90px 50px;
+    position: relative;
+}
+
+.left h1{
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+.left p{
+    margin: 65px 0px;
+    padding-right: 163px;
+    line-height: 1.5;
+    color: hsl(0, 0%, 41%);
+}
+
+.left .button-learn{
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    padding: 13px 25px;
+    border-radius: 12px;
+}
+
+.button-learn:active{
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 41%);
+}
+
+main .brand{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main .brand img{
+    /* width: 80%; */
+    object-fit: contain;
+}
+
+main .right{
+    overflow: hidden;
+}
+
+main .right img{
+    width: 94%;
+    min-height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1024px){
+    main{
+        padding:50px
+    }
+
+    main .left{
+        padding: 50px;
+    }
+
+    main .left p{
+        padding: 0;
+    }
+
+    main .right img{
+        width: 100%;
+    }
+
+    main .brand{
+        position: relative;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    *{
+        overflow-x: hidden ;
+    }
+    body{
+        position: relative;
+    }
+    nav{
+        justify-content: space-between;
+        overflow-x: hidden;
+        padding-left: 10px;
+        padding-right:10px;
+    }
+
+    nav .menu{
+        position: absolute;
+        top: 0;
+        right: -500px;
+        width: 60%;
+        height: 100%;
+        background-color: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 50px;
+        padding: 80px 35px;
+        font-size: 16px;
+        z-index: 2000;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .toggler{
+        display: block;
+        position: relative;
+        z-index: 9999;
+    }
+
+    main .left{
+        overflow-x: hidden;
+        position: static;
+    }
+
+    .menu .left-menu{
+        flex-direction: column;
+        align-items: flex-start;
+        position: static;
+    }
+
+    .left-menu button{
+        font-size: 16px;
+    }
+
+    nav .menu ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    nav .menu a{
+        margin: 0;
+    }
+
+    .right-menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+    }
+
+    .features{
+        display: none;
+        position: relative;
+        background-color: transparent;
+        padding:0;
+        margin-left: 20px;
+        box-shadow: none;
+        top:0;
+        left: 1px;
+    }
+
+    .features li{
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    
+    .features .iconn{
+        vertical-align: bottom;
+        width: 16px;
+        margin-right: 8px;
+    }
+
+    .company{
+        display: none;
+        position: relative;
+        background-color: transparent;
+        padding:0;
+        margin-left: 20px;
+        box-shadow: none;
+        top:0;
+        left: 1px;
+    }
+
+    .company li{
+        margin-bottom: 15px;
+    }
+
+    main{
+        margin-top: 30px;
+        flex-direction: column-reverse;
+        padding: 0;
+        gap: 30px;
+    }
+
+    main .left h1{
+        font-size: 50px;
+    }
+
+    main .left{
+        text-align: center;
+        padding: 20px;
+    }
+
+    main .left p{
+        margin: 20px 0px 35px 0px;
+    }
+
+    main .brand{
+        justify-content: center;
+        margin-top: 70px;
+    }
+
+   main .right img{
+        object-fit: contain;
+   }
+}
+
+
+footer{
+    margin-top: 50px;
+    font-size: 14px;
+}
